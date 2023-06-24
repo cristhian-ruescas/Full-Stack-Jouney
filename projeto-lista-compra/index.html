@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista-Compra</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1672/1672182.png"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <section class="container">
+        <div>
+            <h1 class="title">Minha lista de compras</h1>
+        </div>
+        <form class="inputContainer" onsubmit="submitForm(event)">
+            <label for="item">Item:</label>
+            <input type="text" class="input" id="item" name="item" autocomplete="off">
+
+            <label for="valor">Valor:</label>
+            <input type="text" class="input" id="valor" name="valor" autocomplete="off">
+            <span id="valorError" class="inputError"></span>
+            <button type="submit" class="btSubmit">Adicionar</button>
+        </form>
+        <div id="resultadoTotal">
+            <h2>Resultado:</h2>
+            <table id="resultadoTable">
+                <thead>
+                    <tr>
+                      <th class="table-header">Item:</th>
+                      <th class="table-header">Valor:</th>
+                      <th class="table-header">Total:</th>
+                    </tr>
+                </thead>
+                <tbody id="resultadoBody"></tbody>
+            </table>
+        </div>
+        <img src="https://cdn-icons-png.flaticon.com/512/6795/6795762.png" onClick="gerarPdf()" alt="Ícone PDF" class="icone-pdf">
+    </section>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
