@@ -33,8 +33,9 @@ function submitForm(e) {
 
   const item = itemInput.value;
   const valor = valorInput.value;
+  const valorFormatado = parseFloat(valor).toFixed(2);
 
-  if (valor === '' || item === '') {
+  if (valorFormatado === '' || item === '') {
     exibirErro('Campos vazios. Insira um número e um item.');
     return;
   }
@@ -47,10 +48,11 @@ function submitForm(e) {
   const totalCell = document.createElement('td');
 
   itemCell.textContent = item;
-  valorCell.textContent = adicionarMoeda(valor);
+  valorCell.textContent = adicionarMoeda(valorFormatado);
 
-  valorTotal += Number(valor);
-  totalCell.textContent = adicionarMoeda(valorTotal.toString());
+  valorTotal += Number(valorFormatado);
+  const valorTotalFormatado = valorTotal.toFixed(2); // Formatação do valorTotal
+  totalCell.textContent = adicionarMoeda(valorTotalFormatado);
 
   tr.appendChild(itemCell);
   tr.appendChild(valorCell);
