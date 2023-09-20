@@ -1,0 +1,51 @@
+@import url('./Home/background.css');
+@import url('./Home/header.css');
+@import url('./Home/main.css');
+@import url('./Trailer/main.css');
+@import url('./Personagens/main.css');
+@import url('./Grupo/main.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+section {
+    transition: height 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+section:not(:target) {
+  display: none;
+}
+
+  :root {
+    --text: #EDF1F7;
+    --red: #040547;
+    --blue: #0041C2;
+    --green: #ff0808;
+    --yellow: #ffc12b;
+  }
+  
+  body, button, a {
+    color: var(--text);
+    font: 400 1rem "Mukta", sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  #app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }

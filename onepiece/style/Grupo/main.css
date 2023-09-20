@@ -1,0 +1,46 @@
+#Grupo {
+    background: var(--white);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centralize verticalmente */
+    align-items: center; /* Centralize horizontalmente */
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+#lista_pessoas {
+    margin-top: 5rem;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    list-style: none;
+    padding: 0;
+}
+
+.equipe {
+    margin: 0 1rem; 
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.equipe img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+}
+
+.equipe p {
+    font-size: 22px;
+}
+
+.button-personagem{
+    border-radius: 10%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.3) 20%, rgba(10, 12, 16, 0.99));
+}
